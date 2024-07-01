@@ -1,0 +1,787 @@
+{% extends 'base.html' %}
+{% block title %}Amazon.in: Smartphones & Basic Mobiles: Electronics: Smartphones, Basic Mobiles & More{% endblock %}
+{% block body %}
+<div class="nav-category">
+   <div class="nav-category-container">
+      <a><span>Electronics</span></a>
+      <a >Mobiles & Accessories</a>
+      <a >Laptop & Accessories</a>
+      <a >TV & Home Entertainment</a>
+      <a >Audio</a>
+      <a >Cameras</a>
+      <a >Computer Peripherals</a>
+      <a >Smart Technology</a>
+      <a >Musical Instruments</a>
+      <a >Office & Stationery</a>
+   </div>
+</div>
+<div class="smartphones">
+   <div class="filter">
+      <div class="filter-heading">
+         <h4>Category</h4>
+      </div>
+      <div class="filter-subheading">
+         <ul>
+            <li><label><i class="fa-solid fa-angle-left"></i> Electronics</label></li>
+            <li><label><i class="fa-solid fa-angle-left"></i> Mobiles & Accessories</label></li>
+            <li><label><b>Smartphones & Basic Mobiles</b></label></li>
+            <li><label> Basic Mobiles</label></li>
+            <li><label>Smartphones</label></li>
+         </ul>
+      </div>
+      <div class="filter-memory">
+         <h4>Memory & Storage Capacity</h4>
+         <ul>
+            <li><label><input type="checkbox"> Up to 3.9 GB</label></li>
+            <li><label><input type="checkbox"> 4 GB</label></li>
+            <li><label><input type="checkbox"> 8 GB</label></li>
+            <li><label><input type="checkbox"> 16 GB</label></li>
+            <li><label><input type="checkbox"> 32 GB</label></li>
+            <li><label><input type="checkbox"> 64 GB</label></li>
+            <li><label><input type="checkbox"> 128 GB</label></li>
+            <li><label><input type="checkbox"> 256 GB</label></li>
+            <li><label><input type="checkbox"> 512 GB & above</label></li>
+         </ul>
+      </div>
+      <div class="filter-prime">
+         <h4>Amazon Prime</h4>
+         <ul>
+            <li><input type="checkbox"> <img src="/static/img/amazon-prime-icon-logo.png" alt="prime" style="height: 15px; width: 53px;"></li>
+         </ul>
+      </div>
+      <div class="filter-brand">
+         <h4>Brand</h4>
+         <ul>
+            <li><label><input type="checkbox"> Tecno</label></li>
+            <li><label><input type="checkbox"> Redmi</label></li>
+            <li><label><input type="checkbox"> Apple</label></li>
+            <li><label><input type="checkbox"> OnePlus</label></li>
+            <li><label><input type="checkbox"> POCO</label></li>
+            <li><label><input type="checkbox"> iQOO</label></li>
+            <li><label><input type="checkbox"> Samsung</label></li>
+         </ul>
+      </div>
+      <div class="filter-delivery">
+         <h4>Delivery Day</h4>
+         <ul>
+            <li><label><input type="checkbox"> Get It by Tomorrow</label></li>
+         </ul>
+      </div>
+      <div class="filter-pay">
+         <h4>Pay On Delivery</h4>
+         <ul>
+            <li><label><input type="checkbox"> Eligible for Pay On Delivery</label></li>
+         </ul>
+      </div>
+      <div class="filter-battery">
+         <h4>Battery Capacity</h4>
+         <ul>
+            <li><label><input type="checkbox"> Up to 2,999 mAh</label></li>
+            <li><label><input type="checkbox"> 3,000 to 3,999 mAh</label></li>
+            <li><label><input type="checkbox"> 4,000 to 4,999 mAh</label></li>
+            <li><label><input type="checkbox"> 5,000 to 5,999 mAh</label></li>
+            <li><label><input type="checkbox"> 6,000 mAh & Above</label></li>
+         </ul>
+      </div>
+      <div class="filter-gps">
+         <h4>GPS</h4>
+         <ul>
+            <li><label><input type="checkbox"> False</label></li>
+            <li><label><input type="checkbox"> True</label></li>
+         </ul>
+      </div>
+      <div class="filter-primary">
+         <h4>Mobile Phone Primary Camera Resolution</h4>
+         <ul>
+            <li><label><input type="checkbox"> Up to 3.9 MP</label></li>
+            <li><label><input type="checkbox"> 4 - 7.9 MP</label></li>
+            <li><label><input type="checkbox"> 8 - 11.9 MP</label></li>
+            <li><label><input type="checkbox"> 12 - 15.9 MP</label></li>
+            <li><label><input type="checkbox"> 16 - 19.9 MP</label></li>
+            <li><label><input type="checkbox"> 20 - 23.9 MP</label></li>
+            <li><label><input type="checkbox"> 32 MP & Above</label></li>
+         </ul>
+      </div>
+      <div class="filter-lens">
+         <h4>Lens Type</h4>
+         <ul>
+            <li><label><input type="checkbox"> Macro</label></li>
+            <li><label><input type="checkbox"> Telephoto</label></li>
+            <li><label><input type="checkbox"> Ultra Wide</label></li>
+            <li><label><input type="checkbox"> Ultra Wide Angle</label></li>
+            <li><label><input type="checkbox"> Wide Angle</label></li>
+         </ul>
+      </div>
+      <div class="filter-life">
+         <h4>Battery Average Life</h4>
+         <ul>
+            <li><label><input type="checkbox"> Up to 6.9 h</label></li>
+            <li><label><input type="checkbox"> 7 to 12.9 h</label></li>
+            <li><label><input type="checkbox"> 13 to 18.9 h</label></li>
+            <li><label><input type="checkbox"> 19 h & above</label></li>
+         </ul>
+      </div>
+      <div class="filter-resolution">
+         <h4>Resolution</h4>
+         <ul>
+            <li><label><input type="checkbox"> 1080 x 2400</label></li>
+            <li><label><input type="checkbox"> 1920 x 1080</label></li>
+            <li><label><input type="checkbox"> 1600 x 720</label></li>
+            <li><label><input type="checkbox"> 1280 x 720</label></li>
+            <li><label><input type="checkbox"> 2340 x 1080</label></li>
+            <li><label><input type="checkbox"> 1080 x 2340</label></li>
+            <li><label><input type="checkbox"> 2400 x 1080</label></li>
+         </ul>
+      </div>
+      <div class="filter-refresh">
+         <h4>Refresh Rate</h4>
+         <ul>
+            <li><label><input type="checkbox"> Up to 88 Hz</label></li>
+            <li><label><input type="checkbox"> 89 to 104 Hz</label></li>
+            <li><label><input type="checkbox"> 105 to 120 Hz</label></li>
+            <li><label><input type="checkbox"> 121 Hz & above</label></li>
+         </ul>
+      </div>
+      <div class="filter-ram">
+         <h4>Installed RAM Size</h4>
+         <ul>
+            <li><label><input type="checkbox"> Up to 1.9 GB</label></li>
+            <li><label><input type="checkbox"> 2 to 3.9 GB</label></li>
+            <li><label><input type="checkbox"> 4 to 5.9 GB</label></li>
+            <li><label><input type="checkbox"> 6 to 7.9 GB</label></li>
+            <li><label><input type="checkbox"> 8 to 9.9 GB</label></li>
+            <li><label><input type="checkbox"> 10 GB & Above</label></li>
+         </ul>
+      </div>
+      <div class="filter-front">
+         <h4>Front Photo Sensor Resolution</h4>
+         <ul>
+            <li><label><input type="checkbox"> Up to 6.9 MP</label></li>
+            <li><label><input type="checkbox"> 7.0 to 9.9 MP</label></li>
+            <li><label><input type="checkbox"> 10.0 to 12.9 MP</label></li>
+            <li><label><input type="checkbox"> 13.0 MP & above</label></li>
+         </ul>
+      </div>
+      <div class="filter-color">
+         <h4>Colour</h4>
+         <div class="container">
+            <label class="color-box color1">
+            <input type="checkbox" name="color" value="black">
+            </label>
+            <label class="color-box color2">
+            <input type="checkbox" name="color" value="grey">
+            </label>
+            <label class="color-box color3">
+            <input type="checkbox" name="color" value="white">
+            </label>
+            <label class="color-box color4">
+            <input type="checkbox" name="color" value="brown">
+            </label>
+            <label class="color-box color5">
+            <input type="checkbox" name="color" value="beige">
+            </label>
+            <label class="color-box color6">
+            <input type="checkbox" name="color" value="red">
+            </label>
+            <label class="color-box color7">
+            <input type="checkbox" name="color" value="pink">
+            </label>
+            <label class="color-box color8">
+            <input type="checkbox" name="color" value="orange">
+            </label>
+            <label class="color-box color9">
+            <input type="checkbox" name="color" value="yellow">
+            </label>
+            <label class="color-box color10">
+            <input type="checkbox" name="color" value="green">
+            </label>
+            <label class="color-box color11">
+            <input type="checkbox" name="color" value="blue">
+            </label>
+            <label class="color-box color12">
+            <input type="checkbox" name="color" value="purple">
+            </label>
+            <label class="color-box color13">
+            <input type="checkbox" name="color" value="gold">
+            </label>
+            <label class="color-box color14">
+            <input type="checkbox" name="color" value="silver">
+            </label>
+            <label class="color-box color15">
+            <input type="checkbox" name="color" value="multicolored">
+            </label>
+            <label class="color-box color16">
+            <input type="checkbox" name="color" value="transparent">
+            </label>
+            <label class="color-box color17">
+            <input type="checkbox" name="color" value="lightblue">
+            </label>
+            <label class="color-box color18">
+            <input type="checkbox" name="color" value="bronze">
+            </label>
+         </div>
+      </div>
+      <div class="filter-shooting">
+         <h4>Shooting Modes</h4>
+         <ul>
+            <li><label><input type="checkbox"> Aperture Priority</label></li>
+            <li><label><input type="checkbox"> Automatic</label></li>
+            <li><label><input type="checkbox"> High Dynamic Range</label></li>
+            <li><label><input type="checkbox"> Macro</label></li>
+            <li><label><input type="checkbox"> Night Mode</label></li>
+            <li><label><input type="checkbox"> Portrait</label></li>
+            <li><label><input type="checkbox"> Scene</label></li>
+         </ul>
+      </div>
+      <div class="filter-sim">
+         <h4>SIM Card Slot Count</h4>
+         <ul>
+            <li><label><input type="checkbox"> Single SIM</label></li>
+            <li><label><input type="checkbox"> Dual SIM</label></li>
+            <li><label><input type="checkbox"> Triple SIM</label></li>
+         </ul>
+      </div>
+      <div class="filter-feature">
+         <h4>Features</h4>
+         <ul>
+            <li><label><input type="checkbox"> GPS</label></li>
+            <li><label><input type="checkbox"> Dual SIM</label></li>
+            <li><label><input type="checkbox"> Music Player</label></li>
+            <li><label><input type="checkbox"> Primary Camera</label></li>
+            <li><label><input type="checkbox"> Radio</label></li>
+            <li><label><input type="checkbox"> Touchscreen</label></li>
+            <li><label><input type="checkbox"> USB</label></li>
+         </ul>
+      </div>
+      <div class="filter-display">
+         <h4>Display Type</h4>
+         <ul>
+            <li><label><input type="checkbox"> AMOLED</label></li>
+            <li><label><input type="checkbox"> LCD</label></li>
+            <li><label><input type="checkbox"> OLED</label></li>
+         </ul>
+      </div>
+      <div class="filter-screensize">
+         <h4>Screen Size</h4>
+         <ul>
+            <li><label><input type="checkbox"> Up to 3.9 in</label></li>
+            <li><label><input type="checkbox"> 4 to 4.4 in</label></li>
+            <li><label><input type="checkbox"> 4.5 to 4.9 in</label></li>
+            <li><label><input type="checkbox"> 5 to 5.4 in</label></li>
+            <li><label><input type="checkbox"> 5.5 in & above</label></li>
+         </ul>
+      </div>
+      <div class="filter-connectivity">
+         <h4>Connectivity Technology</h4>
+         <ul>
+            <li><label><input type="checkbox"> Bluetooth</label></li>
+            <li><label><input type="checkbox"> Infrared</label></li>
+            <li><label><input type="checkbox"> NFC</label></li>
+            <li><label><input type="checkbox"> USB</label></li>
+            <li><label><input type="checkbox"> Wi-Fi</label></li>
+         </ul>
+      </div>
+      <div class="filter-connector-type">
+         <h4>Connector Type</h4>
+         <ul>
+            <li><label><input type="checkbox"> 3.5mm Jack</label></li>
+            <li><label><input type="checkbox"> Micro USB</label></li>
+            <li><label><input type="checkbox"> Mini USB</label></li>
+            <li><label><input type="checkbox"> USB Type C</label></li>
+         </ul>
+      </div>
+      <div class="filter-biometric">
+         <h4>Biometric Security Feature</h4>
+         <ul>
+            <li><label><input type="checkbox"> Face Recognition</label></li>
+            <li><label><input type="checkbox"> Fingerprint Recognition</label></li>
+         </ul>
+      </div>
+      <div class="filter-box-components">
+         <h4>Included Components</h4>
+         <ul>
+            <li><label><input type="checkbox"> Phone Case</label></li>
+            <li><label><input type="checkbox"> Power Adapter</label></li>
+            <li><label><input type="checkbox"> SIM Tray Ejector</label></li>
+            <li><label><input type="checkbox"> USB Cable</label></li>
+            <li><label><input type="checkbox"> Headset</label></li>
+            <li><label><input type="checkbox"> Screen Protector</label></li>
+            <li><label><input type="checkbox"> USB OTG Adapter</label></li>
+         </ul>
+      </div>
+      <div class="filter-weight">
+         <h4>Item Weight</h4>
+         <ul>
+            <li><label><input type="checkbox"> Up to 141.9 g</label></li>
+            <li><label><input type="checkbox"> 142 to 197.9 g</label></li>
+            <li><label><input type="checkbox"> 198 to 254.9 g</label></li>
+            <li><label><input type="checkbox"> 255 g & Above</label></li>
+         </ul>
+      </div>
+      <div class="filter-video">
+         <h4>Video Capture Resolution</h4>
+         <ul>
+            <li><label><input type="checkbox"> 720</label></li>
+            <li><label><input type="checkbox"> 1080p</label></li>
+            <li><label><input type="checkbox"> 2K</label></li>
+            <li><label><input type="checkbox"> 4K</label></li>
+            <li><label><input type="checkbox"> 8K</label></li>
+         </ul>
+      </div>
+      <div class="filter-cel-brand">
+         <h4>Cell Phone Brands</h4>
+         <ul>
+            <li><label><input type="checkbox"> Top Brands</label></li>
+         </ul>
+      </div>
+      <div class="filter-photo-resolution">
+         <h4>Photo Sensor Resolution</h4>
+         <ul>
+            <li><label><input type="checkbox"> Up to 9.9 MP</label></li>
+            <li><label><input type="checkbox"> 10 to 12.9 MP</label></li>
+            <li><label><input type="checkbox"> 13 to 15.9 MP</label></li>
+            <li><label><input type="checkbox"> 16 MP & Above</label></li>
+         </ul>
+      </div>
+      <div class="filter-form-factor">
+         <h4>Form Factor</h4>
+         <ul>
+            <li><label><input type="checkbox"> Bar</label></li>
+            <li><label><input type="checkbox"> Foldable Case</label></li>
+            <li><label><input type="checkbox"> Foldable Screen</label></li>
+            <li><label><input type="checkbox"> Slate</label></li>
+            <li><label><input type="checkbox"> Slider</label></li>
+         </ul>
+      </div>
+      <div class="filter-human-interface">
+         <h4>Human Interface Input</h4>
+         <ul>
+            <li><label><input type="checkbox"> Buttons</label></li>
+            <li><label><input type="checkbox"> Dial</label></li>
+            <li><label><input type="checkbox"> OCR</label></li>
+            <li><label><input type="checkbox"> Keyboard</label></li>
+            <li><label><input type="checkbox"> Keypad</label></li>
+            <li><label><input type="checkbox"> Microphone</label></li>
+            <li><label><input type="checkbox"> Touchscreen</label></li>
+         </ul>
+      </div>
+      <div class="filter-os">
+         <h4>Operating System</h4>
+         <ul>
+            <li><label><input type="checkbox"> Android 10.0</label></li>
+            <li><label><input type="checkbox"> Android 11.0</label></li>
+            <li><label><input type="checkbox"> Android 12.0</label></li>
+            <li><label><input type="checkbox"> Android 13.0</label></li>
+            <li><label><input type="checkbox"> Nucleus OS</label></li>
+            <li><label><input type="checkbox"> OxygenOS</label></li>
+            <li><label><input type="checkbox"> Symbian 9.1</label></li>
+         </ul>
+      </div>
+      <div class="filter-sim-size">
+         <h4>SIM Card Size</h4>
+         <ul>
+            <li><label><input type="checkbox"> Macro</label></li>
+            <li><label><input type="checkbox"> Mini</label></li>
+            <li><label><input type="checkbox"> Nano</label></li>
+            <li><label><input type="checkbox"> Standard</label></li>
+         </ul>
+      </div>
+      <div class="filter-cellular">
+         <h4>Cellular Technology</h4>
+         <ul>
+            <li><label><input type="checkbox"> 2G</label></li>
+            <li><label><input type="checkbox"> 3G</label></li>
+            <li><label><input type="checkbox"> 4G</label></li>
+            <li><label><input type="checkbox"> 5G</label></li>
+         </ul>
+      </div>
+      <div class="filter-review">
+         <h4>Avg. Customer Review</h4>
+         <ul>
+            <li><label><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-regular fa-star" style="color: #FFD43B;"></i> & Up</label></li>
+            <li><label><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-regular fa-star" style="color: #FFD43B;"></i><i class="fa-regular fa-star" style="color: #FFD43B;"></i> & Up</label></li>
+            <li><label><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-regular fa-star" style="color: #FFD43B;"></i><i class="fa-regular fa-star" style="color: #FFD43B;"></i><i class="fa-regular fa-star" style="color: #FFD43B;"></i> & Up</label></li>
+            <li><label><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-regular fa-star" style="color: #FFD43B;"></i><i class="fa-regular fa-star" style="color: #FFD43B;"></i><i class="fa-regular fa-star" style="color: #FFD43B;"></i><i class="fa-regular fa-star" style="color: #FFD43B;"></i> & Up</label></li>
+         </ul>
+      </div>
+      <div class="filter-new-arrival">
+         <h4>New Arrivals</h4>
+         <ul>
+            <li>Last 30 days</li>
+            <li>Last 90 days</li>
+         </ul>
+      </div>
+      <div class="filter-condition">
+         <h4>Item Condition</h4>
+         <ul>
+            <li>New</li>
+            <li>Renewed</li>
+         </ul>
+      </div>
+      <div class="filter-price">
+         <h4>Price</h4>
+         <ul>
+            <li>Under ₹1,000</li>
+            <li>₹1,000 - ₹5,000</li>
+            <li>₹5,000 - ₹10,000</li>
+            <li>₹10,000 - ₹20,000</li>
+            <li>Over ₹20,000</li>
+         </ul>
+      </div>
+      <div class="filter-deals">
+         <h4>Deals & Discounts</h4>
+         <ul>
+            <li>All Discounts</li>
+            <li>Today's Deals</li>
+         </ul>
+      </div>
+      <div class="filter-discout">
+         <h4>Discount</h4>
+         <ul>
+            <li>10% Off or more</li>
+            <li>25% Off or more</li>
+            <li>35% Off or more</li>
+            <li>50% Off or more</li>
+            <li>60% Off or more</li>
+            <li>70% Off or more</li>
+         </ul>
+      </div>
+      <div class="filter-seller">
+         <h4>Seller</h4>
+         <ul>
+            <li><label><input type="checkbox"> Daily Shoppers</label></li>
+            <li><label><input type="checkbox"> Appario Retail Private Ltd</label></li>
+            <li><label><input type="checkbox"> OldSold in</label></li>
+            <li><label><input type="checkbox"> Darshita Mobiles</label></li>
+            <li><label><input type="checkbox"> Livemate</label></li>
+            <li><label><input type="checkbox"> Mobex Refurb</label></li>
+            <li><label><input type="checkbox"> Authorized-Dealer</label></li>
+            <li><label><input type="checkbox"> SelTrue</label></li>
+            <li><label><input type="checkbox"> Appario.</label></li>
+            <li><label><input type="checkbox"> m.ElectronicS</label></li>
+         </ul>
+      </div>
+      <div class="filter-avalability">
+         <h4>Availability</h4>
+         <ul>
+            <li><label><input type="checkbox"> Include Out of Stock</label></li>
+         </ul>
+      </div>
+   </div>
+   <div class="mobile">
+      <div class="mobile-heading">
+         <h2>Smartphones & Basic Mobiles</h2>
+         <p><span>Bestsellers</span> | Find a wide selection of mobiles including Android Mobiles, Dual SIM Mobiles and Mobiles under Rs.10,000. You can also find a great selection of brands including Apple, Samsung, Micromax, Nokia, HTC and more.</p>
+      </div>
+      <div class="most-gifted">
+         <div class="most-gifted-heading">
+             <h2>Most Gifted</h2>
+             <p><span>See more</span></p>
+         </div>
+         <div class="most-gifted-card">
+             {% for product in data1 %}
+             <div class="card">
+                 <img src="{{ url_for('static', filename=product[1]) }}" alt="{{ product[4] }}">
+                 <div class="card-body">
+                     <h3><span class="rupee" style="color: black;">₹</span>{{ product[3] }}</h3>
+                     <p>
+                         <strike>₹{{ product[2] }}</strike> <br>
+                         <span class="product-details" style="color: black;">{{ product[4] }} ({{ product[5] }}) - {{ product[6] }}</span>
+                     <div class="review">
+                         <span class="stars">
+                             {% set star_rating = product[7] | float %}
+                             {% set full_stars = star_rating | int %}
+                             {% set half_star = 1 if (star_rating - full_stars) >= 0.5 else 0 %}
+                             {% set empty_stars = 5 - full_stars - half_star %}
+                             {% for _ in range(full_stars) %}
+                             <i class="fa-solid fa-star" style="color: #ffaa3b;"></i>
+                             {% endfor %}
+                             {% if half_star > 0 %}
+                             <i class="fa-regular fa-star-half-stroke" style="color: #ffaa3b;"></i>
+                             {% endif %}
+                             {% for _ in range(empty_stars) %}
+                             <i class="fa-regular fa-star" style="color: #ffaa3b;"></i>
+                             {% endfor %}
+                         </span> 
+                         <h6>{{ product[8] }}</h6>
+                     </div>
+                     </p>
+                     <form action="{{ url_for('add_to_cart') }}" method="POST">
+                         <input type="hidden" name="image_url" value="{{ product[1] }}">
+                         <input type="hidden" name="mrp" value="{{ product[2] }}">
+                         <input type="hidden" name="selling_price" value="{{ product[3] }}">
+                         <input type="hidden" name="model_name" value="{{ product[4] }}">
+                         <input type="hidden" name="storage_details" value="{{ product[5] }}">
+                         <input type="hidden" name="color" value="{{ product[6] }}">
+                         <input type="hidden" name="star_rating" value="{{ product[7] }}">
+                         <input type="hidden" name="num_reviews" value="{{ product[8] }}">
+                         <button type="submit" class="add-to-cart">Add to Cart</button>
+                     </form>
+                 </div>
+             </div>
+             {% endfor %}
+         </div>
+     </div>
+     
+     <div class="featured">
+         <div class="most-gifted-heading">
+             <h2>Featured Deals</h2>
+         </div>
+         <div class="most-gifted-card">
+             {% for product in data2 %}
+             <div class="card">
+                 <img src="{{ url_for('static', filename=product[1]) }}" alt="{{ product[4] }}">
+                 <div class="card-body">
+                     <h3><span class="rupee"  style="color: black;">₹</span>{{ product[3] }}</h3>
+                     <p>
+                         <strike>₹{{ product[2] }}</strike> <br>
+                         <span class="product-details" style="color: black;">{{ product[4] }} ({{ product[5] }}) - {{ product[6] }}</span>
+                     <div class="review">
+                         <span class="stars">
+                             {% set star_rating = product[7] | float %}
+                             {% set full_stars = star_rating | int %}
+                             {% set half_star = 1 if (star_rating - full_stars) >= 0.5 else 0 %}
+                             {% set empty_stars = 5 - full_stars - half_star %}
+                             {% for _ in range(full_stars) %}
+                             <i class="fa-solid fa-star" style="color: #ffaa3b;"></i>
+                             {% endfor %}
+                             {% if half_star > 0 %}
+                             <i class="fa-regular fa-star-half-stroke" style="color: #ffaa3b;"></i>
+                             {% endif %}
+                             {% for _ in range(empty_stars) %}
+                             <i class="fa-regular fa-star" style="color: #ffaa3b;"></i>
+                             {% endfor %}
+                         </span>
+                         <h6>{{ product[8] }}</h6>
+                     </div>
+                     </p>
+                     <form action="{{ url_for('add_to_cart') }}" method="POST">
+                         <input type="hidden" name="image_url" value="{{ product[1] }}">
+                         <input type="hidden" name="mrp" value="{{ product[2] }}">
+                         <input type="hidden" name="selling_price" value="{{ product[3] }}">
+                         <input type="hidden" name="model_name" value="{{ product[4] }}">
+                         <input type="hidden" name="storage_details" value="{{ product[5] }}">
+                         <input type="hidden" name="color" value="{{ product[6] }}">
+                         <input type="hidden" name="star_rating" value="{{ product[7] }}">
+                         <input type="hidden" name="num_reviews" value="{{ product[8] }}">
+                         <button type="submit" class="add-to-cart">Add to Cart</button>
+                     </form>
+                 </div>
+             </div>
+             {% endfor %}
+         </div>
+     </div>
+     
+     <div class="bestseller">
+         <div class="most-gifted-heading">
+             <h2>Best sellers</h2>
+             <p><span>See more</span></p>
+         </div>
+         <div class="most-gifted-card">
+             {% for product in data3 %}
+             <div class="card">
+                 <img src="{{ url_for('static', filename=product[1]) }}" alt="{{ product[4] }}">
+                 <div class="card-body">
+                     <h3><span class="rupee" style="color: black;">₹</span>{{ product[3] }}</h3>
+                     <p>
+                         <strike>₹{{ product[2] }}</strike> <br>
+                         <span class="product-details" style="color: black;">{{ product[4] }} ({{ product[5] }}) - {{ product[6] }}</span>
+                     <div class="review">
+                         <span class="stars">
+                             {% set star_rating = product[7] | float %}
+                             {% set full_stars = star_rating | int %}
+                             {% set half_star = 1 if (star_rating - full_stars) >= 0.5 else 0 %}
+                             {% set empty_stars = 5 - full_stars - half_star %}
+                             {% for _ in range(full_stars) %}
+                             <i class="fa-solid fa-star" style="color: #ffaa3b;"></i>
+                             {% endfor %}
+                             {% if half_star > 0 %}
+                             <i class="fa-regular fa-star-half-stroke" style="color: #ffaa3b;"></i>
+                             {% endif %}
+                             {% for _ in range(empty_stars) %}
+                             <i class="fa-regular fa-star" style="color: #ffaa3b;"></i>
+                             {% endfor %}
+                         </span> 
+                         <h6>{{ product[8] }}</h6>
+                     </div>
+                     </p>
+                     <form action="{{ url_for('add_to_cart') }}" method="POST">
+                         <input type="hidden" name="image_url" value="{{ product[1] }}">
+                         <input type="hidden" name="mrp" value="{{ product[2] }}">
+                         <input type="hidden" name="selling_price" value="{{ product[3] }}">
+                         <input type="hidden" name="model_name" value="{{ product[4] }}">
+                         <input type="hidden" name="storage_details" value="{{ product[5] }}">
+                         <input type="hidden" name="color" value="{{ product[6] }}">
+                         <input type="hidden" name="star_rating" value="{{ product[7] }}">
+                         <input type="hidden" name="num_reviews" value="{{ product[8] }}">
+                         <button type="submit" class="add-to-cart">Add to Cart</button>
+                     </form>
+                 </div>
+             </div>
+             {% endfor %}
+         </div>
+     </div>
+     <div class="recommended">
+      <div class="most-gifted-heading">
+          <h2>Recommended for you</h2>
+      </div>
+      <div class="most-gifted-card">
+          {% for product in data4 %}
+          <div class="card">
+              <img src="{{ url_for('static', filename=product[1]) }}" alt="{{ product[4] }}">
+              <div class="card-body">
+                  <h3><span class="rupee" style="color: black;">₹</span>{{ product[3] }}</h3>
+                  <p>
+                      <strike>₹{{ product[2] }}</strike> <br>
+                      <span class="product-details" style="color: black;">{{ product[4] }} ({{ product[5] }}) - {{ product[6] }}</span>
+                  <div class="review">
+                      <span class="stars">
+                          {% set star_rating = product[7] | float %}
+                          {% set full_stars = star_rating | int %}
+                          {% set half_star = 1 if (star_rating - full_stars) >= 0.5 else 0 %}
+                          {% set empty_stars = 5 - full_stars - half_star %}
+                          {% for _ in range(full_stars) %}
+                          <i class="fa-solid fa-star" style="color: #ffaa3b;"></i>
+                          {% endfor %}
+                          {% if half_star > 0 %}
+                          <i class="fa-regular fa-star-half-stroke" style="color: #ffaa3b;"></i>
+                          {% endif %}
+                          {% for _ in range(empty_stars) %}
+                          <i class="fa-regular fa-star" style="color: #ffaa3b;"></i>
+                          {% endfor %}
+                      </span> 
+                      <h6>{{ product[8] }}</h6>
+                  </div>
+                  </p>
+                  <form action="{{ url_for('add_to_cart') }}" method="POST">
+                      <input type="hidden" name="image_url" value="{{ product[1] }}">
+                      <input type="hidden" name="mrp" value="{{ product[2] }}">
+                      <input type="hidden" name="selling_price" value="{{ product[3] }}">
+                      <input type="hidden" name="model_name" value="{{ product[4] }}">
+                      <input type="hidden" name="storage_details" value="{{ product[5] }}">
+                      <input type="hidden" name="color" value="{{ product[6] }}">
+                      <input type="hidden" name="star_rating" value="{{ product[7] }}">
+                      <input type="hidden" name="num_reviews" value="{{ product[8] }}">
+                      <button type="submit" class="add-to-cart">Add to Cart</button>
+                  </form>
+              </div>
+          </div>
+          {% endfor %}
+      </div>
+  </div>
+  
+  <div class="hotrelease">
+      <div class="most-gifted-heading">
+          <h2>Hot new releases</h2>
+          <p><span>See more</span></p>
+      </div>
+      <div class="most-gifted-card">
+          {% for product in data5 %}
+          <div class="card">
+              <img src="{{ url_for('static', filename=product[1]) }}" alt="{{ product[4] }}">
+              <div class="card-body">
+                  <h3><span class="rupee" style="color: black;">₹</span>{{ product[3] }}</h3>
+                  <p>
+                      <strike>₹{{ product[2] }}</strike> <br>
+                      <span class="product-details" style="color: black;">{{ product[4] }} ({{ product[5] }}) - {{ product[6] }}</span>
+                  <div class="review">
+                      <span class="stars">
+                          {% set star_rating = product[7] | float %}
+                          {% set full_stars = star_rating | int %}
+                          {% set half_star = 1 if (star_rating - full_stars) >= 0.5 else 0 %}
+                          {% set empty_stars = 5 - full_stars - half_star %}
+                          {% for _ in range(full_stars) %}
+                          <i class="fa-solid fa-star" style="color: #ffaa3b;"></i>
+                          {% endfor %}
+                          {% if half_star > 0 %}
+                          <i class="fa-regular fa-star-half-stroke" style="color: #ffaa3b;"></i>
+                          {% endif %}
+                          {% for _ in range(empty_stars) %}
+                          <i class="fa-regular fa-star" style="color: #ffaa3b;"></i>
+                          {% endfor %}
+                      </span> 
+                      <h6>{{ product[8] }}</h6>
+                  </div>
+                  </p>
+                  <form action="{{ url_for('add_to_cart') }}" method="POST">
+                      <input type="hidden" name="image_url" value="{{ product[1] }}">
+                      <input type="hidden" name="mrp" value="{{ product[2] }}">
+                      <input type="hidden" name="selling_price" value="{{ product[3] }}">
+                      <input type="hidden" name="model_name" value="{{ product[4] }}">
+                      <input type="hidden" name="storage_details" value="{{ product[5] }}">
+                      <input type="hidden" name="color" value="{{ product[6] }}">
+                      <input type="hidden" name="star_rating" value="{{ product[7] }}">
+                      <input type="hidden" name="num_reviews" value="{{ product[8] }}">
+                      <button type="submit" class="add-to-cart">Add to Cart</button>
+                  </form>
+              </div>
+          </div>
+          {% endfor %}
+      </div>
+  </div>
+  
+  <div class="toprated">
+      <div class="most-gifted-heading">
+          <h2>Top rated</h2>
+          <p><span>See more</span></p>
+      </div>
+      <div class="most-gifted-card">
+          {% for product in data6 %}
+          <div class="card">
+              <img src="{{ url_for('static', filename=product[1]) }}" alt="{{ product[4] }}">
+              <div class="card-body">
+                  <h3><span class="rupee" style="color: black;">₹</span>{{ product[3] }}</h3>
+                  <p>
+                      <strike>₹{{ product[2] }}</strike> <br>
+                      <span class="product-details" style="color: black;">{{ product[4] }} ({{ product[5] }}) - {{ product[6] }}</span>
+                  <div class="review">
+                      <span class="stars">
+                          {% set star_rating = product[7] | float %}
+                          {% set full_stars = star_rating | int %}
+                          {% set half_star = 1 if (star_rating - full_stars) >= 0.5 else 0 %}
+                          {% set empty_stars = 5 - full_stars - half_star %}
+                          {% for _ in range(full_stars) %}
+                          <i class="fa-solid fa-star" style="color: #ffaa3b;"></i>
+                          {% endfor %}
+                          {% if half_star > 0 %}
+                          <i class="fa-regular fa-star-half-stroke" style="color: #ffaa3b;"></i>
+                          {% endif %}
+                          {% for _ in range(empty_stars) %}
+                          <i class="fa-regular fa-star" style="color: #ffaa3b;"></i>
+                          {% endfor %}
+                      </span> 
+                      <h6>{{ product[8] }}</h6>
+                  </div>
+                  </p>
+                  <form action="{{ url_for('add_to_cart') }}" method="POST">
+                      <input type="hidden" name="image_url" value="{{ product[1] }}">
+                      <input type="hidden" name="mrp" value="{{ product[2] }}">
+                      <input type="hidden" name="selling_price" value="{{ product[3] }}">
+                      <input type="hidden" name="model_name" value="{{ product[4] }}">
+                      <input type="hidden" name="storage_details" value="{{ product[5] }}">
+                      <input type="hidden" name="color" value="{{ product[6] }}">
+                      <input type="hidden" name="star_rating" value="{{ product[7] }}">
+                      <input type="hidden" name="num_reviews" value="{{ product[8] }}">
+                      <button type="submit" class="add-to-cart">Add to Cart</button>
+                  </form>
+              </div>
+          </div>
+          {% endfor %}
+      </div>
+   </div>
+      <div class="see_results">
+         <h4>See all results</h4>
+     </div>     
+   </div>
+</div>
+
+<div class="mobile_bottom">
+   <h4>Buy Smartphones & Basic Mobiles at Amazon.in</h4>
+   <p>A cell phone with internet access and other voice and text features is becoming less of a luxury and more of a necessity. Smartphones are a great way to keep yourself updated on virtually everything happening across the world! Technological advancement in smartphones and mobiles have practically altered our lifestyle to an extent that they have become our personal digital assistant. Your smartphone is your companion, a social networking kit, a business tool, a learning device, a gaming gadget, a telephone, a camera, an organizer, an alarm and so much more! <br><br><br>
+
+      Get amazing smartphone deals online at Amazon India which can help you get your favorite model at a much lower price than retail outlets. With some great mobile phone deals, owning a latest smartphone or mobile is much affordable. Check out our Android phone deals and Windows mobile deals for some of the best options. <br><br><br>
+      
+      With over hundreds of products available in basic and smartphone category, browsing becomes all the more fun at our online mobile store. Advanced filters based on online cell phone deals and online smartphone deals, leading brands, functionality and more lead to an enriched user experience. You can also read our customer reviews and ratings on some of the top mobile phones available on our online shopping site before making a choice.</p>
+</div>
+
+{% endblock %}

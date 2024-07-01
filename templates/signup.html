@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Registeration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}">
+</head>
+<body>
+    <section>
+        <div class="logo">
+            <img src="/static/img/amazon_logo_black.jpeg" alt="logo">
+            <span>.in</span>
+        </div>
+        <div class="signup-card">
+            <h1>Create Account</h1>
+            <form action="{{ url_for('signup') }}" method="post">
+                {{ form.hidden_tag() }}
+                
+                <label for="username">Your Name</label>
+                {{ form.username(class="form-control", placeholder="First name and last name") }}
+                
+                <label for="email">Email</label>
+                {{ form.email(class="form-control", placeholder="Your email address") }}
+                
+                <label for="password">Password</label>
+                {{ form.password(class="form-control", placeholder="Enter your password") }}
+                
+                <label for="confirm_password">Confirm Password</label>
+                {{ form.confirm_password(class="form-control", placeholder="Confirm your password") }}
+            
+                <button type="submit">Sign Up</button>
+            </form>
+
+            <a href="" class="icon">Need help?</a>
+
+            <div class="breck">
+                <p>Already have an account? <a href="{{ url_for('login') }}">Sign in</a></p>
+            </div>
+
+            <p>By creating an account, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice.</a></p>
+
+        </div>
+
+        <footer class="login-footer">
+            <div class="footer-link">
+                <a href="#">Conditions of Use</a>
+                <a href="#">Privacy Notice</a>
+                <a href="#">Help</a>
+            </div>
+            <p>© 1996-2024, Amazon.com, Inc. or its affiliates</p>
+        </footer>
+    </section>
+    
+</body>
+</html>

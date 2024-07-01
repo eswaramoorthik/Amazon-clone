@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}Amazon{% endblock %}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/mobile.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/cart_post_login.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/cart_pre_login.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </head>
+<body>
+    <div id="top"></div>
+    <div class="container pt-3">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        
+        <header>
+            <div class="navbar">
+                <div class="nav-logo border">
+                    <a href="{{ url_for('home') }}">
+                        <div class="logo"></div>
+                    </a>
+                </div>
+                
+                <div class="banv-address border">
+                    <p class="add-first">Deliver to</p>
+                    <div class="add-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p class="add-sec">India</p>
+                    </div>
+                </div>
+                <div class="nav-search">
+                    <select class="selectsearch">
+                        <option value="">All</option>
+                    </select>
+                    <input class="search-input" placeholder="Search Amazon.in">
+                    <div class="search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+                <div class="lang border">
+                    <img src="/static/img/ind flag.png" alt="flag" class="flag">
+                    <select class="eng">
+                        <option value="">EN</option>
+                    </select>
+                </div>
+
+                {% if 'email' in session %}
+                <div class="nav-signin border">
+                    <p><span>Hello, {{ user_name }}</span></p>
+                    <p class="nav-second">Account & Lists</p>
+                    <div class="dropdown">
+                        <h2>Your Account</h2>
+                        <a href="{{ url_for('logout') }}" class="btn">Logout</a>
+                    </div>
+                </div>
+                {% else %}
+                <div class="nav-signin border">
+                    <p><span>Hello, sign in</span></p>
+                    <p class="nav-second">Account & Lists</p>
+                    <div class="dropdown">
+                        <h2>Your Account</h2>
+                        <a href="{{ url_for('login') }}" class="btn">Login</a>
+                        <p><a href="{{ url_for('logout') }}">Logout</a></p>
+                    </div>
+                </div>
+                {% endif %}
+                
+                <div class="nav-return border">
+                    <p><span>Returns</span></p>
+                    <p class="nav-order">& Orders</p>
+                </div>
+                <div class="nav-cart border">
+                    <div class="cart-icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-count">{{ cart_count }}</span>
+                    </div>
+                    <div class="cart-text">
+                        {% if 'email' in session %}
+                            <p><a href="{{ url_for('cart_post_login') }}">Cart</a></p>
+                        {% else %}
+                            <p><a href="{{ url_for('cart_pre_login') }}">Cart</a></p>
+                        {% endif %}
+                    </div>
+                </div>
+                
+        </header>
+        <div class="nav-panel">
+            <div class="all border"><i class="fa-solid fa-bars"></i> All</div>
+                <p class="border">Fresh</p>
+                <p class="border">Amazon miniTV</p>
+                <p class="border">Sell</p>
+                <p class="border">Best Sellers</p>
+                <a href="{{ url_for('mobile') }}" class="border">Mobiles</a>
+                <p class="border">Today's Deals</p>
+                <p class="border">Fashion</p>
+                <p class="border">Electronics</p>
+                <p class="border">Prime</p>
+                <p class="border">Home & Kitchen</p>
+                <p class="border">New Releases</p>
+                <p class="border">Customer Service</p>
+                <p class="border">Amazon Pay</p>
+                <p class="border">Computer</p>
+                <p class="border">Books</p>
+                <p class="border">Car & Motorbike</p>
+                <p class="border">Gift Ideas</p>
+            </div>
+        </div>
+
+    {% block body %}
+
+    
+    {% endblock %}
+
+
+    {% if not 'email' in session %}
+    <div class="signin">
+        <div class="signin-container">
+            <hr>
+            <p>See personalized recommendations</p>
+            <button><a href="{{ url_for('login') }}">Sign in</a></button>
+            <p>New Customer? <a href="{{ url_for('signup') }}"><span>Start here</span></a></p>
+            <hr>
+        </div>
+    </div>
+    {% endif %}
+    <!-- signin end -->
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <p><a href="#top">Back to top</a></p>
+        </div>
+    
+        <div class="footer-container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h6 class="footer-column-heading">Get to Know Us</h6>
+                    <ul>
+                        <li>About Us</li>
+                        <li>Careers</li>
+                        <li>Press Releases</li>
+                        <li>Amazon Science</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h6 class="footer-column-heading">Connect with Us</h6>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h6 class="footer-column-heading">Make Money with Us</h6>
+                    <ul>
+                        <li>Sell on Amazon</li>
+                        <li>Sell under Amazon Accelerator</li>
+                        <li>Protect and Build Your Brand</li>
+                        <li>Amazon Global Selling</li>
+                        <li>Become an Affiliate</li>
+                        <li>Fulfilment by Amazon</li>
+                        <li>Advertise Your Products</li>
+                        <li>Amazon Pay on Merchants</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h6 class="footer-column-heading">Let Us Help You</h6>
+                    <ul>
+                        <li>COVID-19 and Amazon</li>
+                        <li>Your Account</li>
+                        <li>Returns Centre</li>
+                        <li>100% Purchase Protection</li>
+                        <li>Amazon App Download</li>
+                        <li>Help</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-language">
+                <hr>
+                <div class="country">
+                    <img src="/static/img/amazon_logo.png" alt="amazon_logo">
+                    <p><i class="fa-solid fa-globe"></i>English</p>
+                    <p><img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="flag" style="height: 10px;">India</p>
+                </div>
+            </div>
+        </div>
+            
+        <div class="footer-end">
+            <div class="navFooterLine navFooterLinkLine navFooterDescLine" aria-label="More on Amazon">
+                <div class="navFooterMoreOnAmazon">
+                    <div class="navFooterFirstFour">
+                        <div class="navFooterDescItem">
+                            <a class="nav_a" href="#">AbeBooks<br>
+                                <span class="navFooterDescText">Books, art<br>& collectibles</span>
+                            </a>
+                        </div>
+                        <div class="navFooterDescItem">
+                            <a class="nav_a" href="#">Amazon Web Services<br>
+                                <span class="navFooterDescText">Scalable Cloud<br>Computing Services</span>
+                            </a>
+                        </div>
+                        <div class="navFooterDescItem">
+                            <a class="nav_a" href="#">Audible<br>
+                                <span class="navFooterDescText">Download<br>Audio Books</span>
+                            </a>
+                        </div>
+                        <div class="navFooterDescItem">
+                            <a class="nav_a" href="#">IMDb<br>
+                                <span class="navFooterDescText">Movies, TV<br>& celebrities</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navFooterNextFour">
+                        <div class="navFooterDescItem">
+                            <a class="nav_a" href="#">Shopbop<br>
+                                <span class="navFooterDescText">Designer<br>Fashion Brands</span>
+                            </a>
+                        </div>
+                        <div class="navFooterDescItem">
+                            <a class="nav_a" href="#">Amazon Business<br>
+                                <span class="navFooterDescText">Everything For<br>Your Business</span>
+                            </a>
+                        </div>
+                        <div class="navFooterDescItem">
+                            <a class="nav_a" href="#">Prime Now<br>
+                                <span class="navFooterDescText">2-Hour Delivery<br>on Everyday Items</span>
+                            </a>
+                        </div>
+                        <div class="navFooterDescItem">
+                            <a class="nav_a" href="#">Amazon Prime Music<br>
+                                <span class="navFooterDescText">75 million songs, ad-free<br>Over 10 million podcast episodes.</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        
+            
+            <div class="footer-end">
+                <div class="navFooterLine navFooterLinkLine navFooterPadItemLine navFooterCopyrightLine">
+                    <ul class="nav-footer-list">
+                        <li class="nav_first">Conditions of Use & Sale</li>
+                        <li class="nav_second">Privacy Notice</li>
+                        <li class="nav_third">Interest-Based Ads</li>
+                    </ul>
+                    <div class="nav_last">© 1996-2024, Amazon.com, Inc. or its affiliates</div>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+
+</body>
+</html>

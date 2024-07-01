@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="mycart">
+    <div class="cart-login-page">
+        <div class="cart-login-container">
+            <div class="cart-login-empty">
+                <h1>Shopping Cart</h1>
+                <p><span>Deselect all items</span></p>
+                <p class="price">Price</p>
+                <hr class="full-width-hr">
+                <div class="product-table">
+                    {% for item in cart_items %}
+                    <div class="product-row">
+                        <div class="column checkbox-col">
+                            <input type="checkbox" checked>
+                        </div>
+                        <div class="column image-col">
+                            <img src="{{ url_for('static', filename=item[2]) }}" alt="{{ item[5] }}">
+                        </div>
+                        <div class="column details-col">
+                            <h3>{{ item[5] }} ({{ item[7] }}, {{ item[6] }})</h3>
+                            <p class="stock">In stock</p>
+                            <img src="/static/img/amazon-prime-icon-logo.png" alt="prime" style="height: 15px; width: 53px;">
+                            <p><b>Color:</b> {{ item[7] }}</p>
+                            <p><b>Size:</b> {{ item[6] }}</p>
+                            <div class="details-col-add">
+                                <form action="{{ url_for('update_quantity', id=item[0]) }}" method="post" class="number-input">
+                                    <button type="submit" name="action" value="decrease">-</button>
+                                    <input type="number" name="quantity" value="{{ item[10] }}" min="1" readonly>
+                                    <button type="submit" name="action" value="increase">+</button>
+                                </form>
+                                <p class="detail-item"><a href="{{ url_for('delete', id=item[0]) }}">Delete</a></p>
+                                <p class="detail-item"><a href="#">Save for later</a></p>
+                                <p class="detail-item"><a href="#">See more like this</a></p>
+                                <p class="detail-item"><a href="#">Share</a></p>
+                            </div>
+                        </div>
+                        <div class="column price-col">
+                            <h4 class="price-indian">₹{{ item[4] }}</h4>
+                        </div>
+                    </div>
+                    <hr class="full-width-hr">
+                    {% endfor %}
+                </div>
+                <p class="subtotal">Subtotal ({{ cart_count }} items): <strong class="subtotal-value">₹{{ subtotal }}</strong></p>
+            </div>
+        </div>
+        <div class="cart-login-container2">
+            
+        </div>
+        <div class="cart-login-desc">
+            <p>The price and availability of items at Amazon.in are subject to change. The shopping cart is a temporary place to store a list of your items and reflects each item's most recent price.<br> Do you have a promotional code? We'll ask you to enter your claim code when it's time to pay.</p>
+        </div>
+    </div>
+    <div class="proceed">
+        <div class="proceed-content">
+            <p class="subtotal">Subtotal ({{ cart_count }} items): <strong class="subtotal-value">₹{{ subtotal }}</strong></p>
+            <button class="bttn"><a href="#">Proceed to Buy</a></button>
+            <select class="emi">
+                <option value="">EMI Available</option>
+            </select>
+        </div>
+    </div>
+</div>
+{% endblock %}

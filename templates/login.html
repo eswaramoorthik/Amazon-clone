@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Sign In</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+    <section>
+        <div class="logo">
+            <img src="/static/img/amazon_logo_black.jpeg" alt="logo">
+            <span>.in</span>
+        </div>
+        <div class="signup-card">
+            <h1>Sign in</h1>
+            <form action="{{ url_for('login') }}" method="post">
+                {{ form.hidden_tag() }}  {# Include CSRF token #}
+                
+                <label for="email">Email</label>
+                {{ form.email(class="form-control", placeholder="Your email address") }}
+
+                
+                <label for="password">Password</label>
+                {{ form.password(class="form-control", placeholder="Enter your password") }}
+
+
+                <button type="submit">Sign In</button>
+            </form>
+            <p>By continuing, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice.</a></p>
+            <a href="#" class="icon">Need help?</a>
+        </div>
+        <div class="breck">
+            <p>New to Amazon?</p>
+        </div>
+        <div class="btn">
+            <button><a href="{{ url_for('signup') }}">Create your Amazon account</a></button>
+        </div>
+        <footer class="login-footer">
+            <div class="footer-link">
+                <a href="#">Conditions of Use</a>
+                <a href="#">Privacy Notice</a>
+                <a href="#">Help</a>
+            </div>
+            <p>© 1996-2024, Amazon.com, Inc. or its affiliates</p>
+        </footer>
+    </section>
+</body>
+</html>

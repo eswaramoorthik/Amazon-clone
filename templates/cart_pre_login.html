@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}Amazon.in Shopping Cart{% endblock %}
+{% block body %}
+
+<div class="cart-page">
+    <div class="cart-container">
+        <img src="/static/img/cart-logout.svg" alt="cart">
+        <div class="cart-empty">
+            <h1>Your Amazon Cart is empty</h1>
+            <p><span>Shop today's deal</span></p>
+            <div class="buttons-container">
+                <button class="btn"><a href="{{ url_for('login') }}">Sign in to your account</a></button>
+                <button class="bttn"><a href="{{ url_for('signup') }}">Sign up now</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="cart-container2">
+
+    </div>
+    <div class="cart-desc">
+        <p>The price and availability of items at Amazon.in are subject to change. The shopping cart is a temporary place to store a list of your items and reflects each item's most recent price.  <br> Do you have a promotional code? We'll ask you to enter your claim code when it's time to pay.</p>
+    </div>
+</div>
+
+
+<div class="signin">
+    <div class="signin-container">
+        <hr>
+        <p>See personalized recommendations</p>
+        <button class="signin-btn"><a href="{{ url_for('login') }}">Sign in</a></button>
+        <p>New Customer? <a href="{{ url_for('signup') }}"><span>Start here</span></a></p>
+        <hr>
+    </div>
+
+</div>
+
+{% endblock body %}

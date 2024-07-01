@@ -1,0 +1,159 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+.footer {
+    font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 103px;
+    height: 31px;
+    margin-top: 15px;
+}
+
+.logo span {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.signup-card {
+    width: 350px;
+    height: 460px;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 20px auto 25px auto;
+}
+
+.signup-card h1 {
+    
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.signup-card label {
+
+    font-size: 13px;
+    padding-left: 2px;
+    padding-bottom: 20x;
+    font-weight: 700;
+}
+
+.signup-card input {
+    width: 300px;
+    height: 31px;
+    padding: 3px 7px;
+    margin-top: 3px;
+    background-color: #fff;
+    border: 1px solid #a6a6a6;
+    border-radius: 3px;
+}
+
+.signup-card button {
+    width: 300px;
+    height: 31px;
+    padding: 3px 7px;
+    margin-top: 15px;
+    cursor: pointer;
+    background-color: #f0c14b;
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    background-image: linear-gradient(#f7da90, #e2b33b);
+    border-radius: 5px;   
+}
+
+.signup-card p, .signup-card p a{
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.signup-card p a {
+    text-decoration: none;
+    color: #0066c0 ;
+}
+
+.icon {
+    font-size: 12px;
+    color: #0066c0;
+}
+
+.icon::before {
+    display: inline-block;
+    content: "";
+    border-top: 4px solid transparent;
+    border-left: 4px solid #949494;
+    border-top: 4px solid transparent;
+    margin-right: 10px;
+}
+
+
+
+.breck {
+    display: flex;
+    justify-content: left;    
+}
+
+.breck a{
+text-decoration: none;
+color: #0066c0;    
+}
+
+.bttn button{
+    width: 300px;
+    height: 31px;
+    margin: 15px auto;
+    cursor: pointer;
+    background-color: #e7e9ec;
+    background-color: #f0c14b;
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    background-image: linear-gradient(#f7da90, #e2b33b);
+    border-radius: 5px;
+}
+
+.footer-link {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    margin: 25px auto 15px auto;
+    
+}
+
+.footer-link a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #0066c0;
+}
+
+.login-footer::before {
+    content: "";
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 44px;
+    margin-top: -35px;
+    border-top: 1px solid transparent;
+    box-shadow: 0 10px 15px -20px #333;
+}
+
+.login-footer p {
+    font-size: 11px;
+    color: #555;
+    text-align: center;
+}
